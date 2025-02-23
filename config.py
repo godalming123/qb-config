@@ -6,6 +6,21 @@ c.fonts.default_size = "12pt"
 c.tabs.position = "bottom"
 c.tabs.favicons.scale = 0.8
 
+c.content.javascript.clipboard = "access-paste"
+config.bind("ge", "scroll-to-perc") # In order to be more similiar to helix keybindings
+config.bind("l", "tab-next")
+config.bind("h", "tab-prev")
+
+c.tabs.show = "multiple"
+
+c.fonts.completion.category = "medium default-size default-family"
+c.fonts.hints = "medium default-size default-family"
+
+c.url.default_page = "qute://start"
+c.url.start_pages = "qute://start"
+c.messages.timeout = 4000
+c.statusbar.widgets = ["keypress", "search_match", "url", "scroll", "history", "progress"]
+
 ##########
 # COLORS #
 ##########
@@ -34,51 +49,35 @@ bg_warning          = "#c678dd" # purple
 # SETTINGS #
 ############
 
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.preferred_color_scheme = "dark"
+
+# Background color of comletion widget
+c.colors.completion.even.bg = bg_alt
+c.colors.completion.odd.bg = bg_alt
+c.colors.completion.category.bg = bg_alt
+c.colors.completion.category.border.top = bg_alt
+c.colors.completion.category.border.bottom = bg_alt
+c.colors.completion.scrollbar.bg = bg_alt
 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column
-c.colors.completion.fg = fg_default
+c.colors.completion.fg = fg_faded
 
-# Background color of the completion widget for rows
-c.colors.completion.even.bg = bg_default
-c.colors.completion.odd.bg = bg_default
-
-# Foreground color of completion widget category headers
+# Color of completion widget category headers
 c.colors.completion.category.fg = bg_hint
 
-# Background color of the completion widget category headers
-c.colors.completion.category.bg = bg_default
-
-# Top border color of the completion widget category headers
-c.colors.completion.category.border.top = bg_default
-
-# Bottom border color of the completion widget category headers
-c.colors.completion.category.border.bottom = bg_default
-
-# Foreground color of the selected completion item
+# Colors of the selected completion item
 c.colors.completion.item.selected.fg = fg_default
-
-# Background color of the selected completion item
-c.colors.completion.item.selected.bg = bg_alt
-
-# Top border color of the selected completion item
-c.colors.completion.item.selected.border.top = bg_alt
-
-# Bottom border color of the selected completion item
-c.colors.completion.item.selected.border.bottom = bg_alt
-
-# Foreground color of the matched text in the selected completion item
+c.colors.completion.item.selected.bg = bg_default
+c.colors.completion.item.selected.border.top = bg_default
+c.colors.completion.item.selected.border.bottom = bg_default
 c.colors.completion.item.selected.match.fg = fg_matched_text
 
 # Foreground color of the matched text in the completion
 c.colors.completion.match.fg = fg_matched_text
 
 # Color of the scrollbar handle in the completion view
-c.colors.completion.scrollbar.fg = fg_default
-
-# Color of the scrollbar in the completion view
-c.colors.completion.scrollbar.bg = bg_default
+c.colors.completion.scrollbar.fg = bg_default
 
 # Background color of disabled items in the context menu
 c.colors.contextmenu.disabled.bg = bg_alt
@@ -116,15 +115,12 @@ c.colors.downloads.stop.bg = bg_passthrough_mode
 # Foreground color for downloads with errors
 c.colors.downloads.error.fg = fg_error
 
-# Font color for hints
-c.colors.hints.fg = bg_default
-
-# Background color for hints. Note that you can use a `rgba(...)` value
+# Colors for hints. Note that you can use a `rgba(...)` value
 # for transparency
-c.colors.hints.bg = bg_hint
-
-# Font color for the matched part of hints
+c.colors.hints.bg = bg_alt
+c.colors.hints.fg = fg_faded
 c.colors.hints.match.fg = fg_default
+c.hints.border = "none"
 
 # Text color for the keyhint widget
 c.colors.keyhint.fg = fg_default
@@ -178,7 +174,7 @@ c.colors.prompts.selected.bg = bg_alt
 c.colors.prompts.selected.fg = fg_default
 
 # Normal mode statusbar colors
-c.colors.statusbar.normal.fg = fg_matched_text
+c.colors.statusbar.normal.fg = fg_default
 c.colors.statusbar.normal.bg = bg_default
 
 # Insert mode statusbar colors
@@ -241,7 +237,7 @@ c.colors.statusbar.url.success.http.fg = bg_passthrough_mode
 
 # Foreground color of the URL in the statusbar on successful load
 # (https)
-c.colors.statusbar.url.success.https.fg = fg_matched_text
+c.colors.statusbar.url.success.https.fg = fg_default
 
 # Foreground color of the URL in the statusbar when there's a warning
 c.colors.statusbar.url.warn.fg = bg_warning
