@@ -1,21 +1,26 @@
 # credits to theova/base16-qutebrowser for the original template
-# credits to https://github.com/leandwo/qutebrowser-themes/blob/master/themes/onedark.py for modified tempate
+# credits to https://github.com/leandwo/qutebrowser-themes/blob/master/themes/onedark.py for modified template
 
-config.load_autoconfig(False)
-c.fonts.default_size = "12pt"
-c.tabs.position = "bottom"
-c.tabs.favicons.scale = 0.8
-
-c.content.javascript.clipboard = "access-paste"
+# Keybindings
 config.bind("ge", "scroll-to-perc") # In order to be more similiar to helix keybindings
 config.bind("l", "tab-next")
 config.bind("h", "tab-prev")
+config.bind("j", "scroll-px 0 200")
+config.bind("k", "scroll-px 0 -200")
 
+# Tabs options
 c.tabs.show = "multiple"
+c.tabs.position = "bottom"
+c.tabs.favicons.scale = 0.8
 
+# Font options
+c.fonts.default_size = "12pt"
 c.fonts.completion.category = "medium default-size default-family"
 c.fonts.hints = "medium default-size default-family"
 
+# Other options
+config.load_autoconfig(False)
+c.content.javascript.clipboard = "access-paste"
 c.url.default_page = "qute://start"
 c.url.start_pages = "qute://start"
 c.messages.timeout = 4000
